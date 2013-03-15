@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  def authenticate_user
+  def authenticated?
     if current_user.blank?
       if request.xhr?
         render :json => new_user_session_path, :status => :unauthorized

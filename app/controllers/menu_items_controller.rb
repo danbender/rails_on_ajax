@@ -17,4 +17,3 @@ class MenuItemsController < ApplicationController
     @menu = Menu.find params[:menu_id]
   end
 end
-=
