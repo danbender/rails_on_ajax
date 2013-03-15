@@ -1,0 +1,11 @@
+%html{:lang => "en"}
+  = render 'layouts/head'
+  %body
+    = render 'layouts/navigation'
+    .container-fluid
+      .row-fluid
+        .span12= yield
+      %hr
+        %footer
+          %p © Company 2012
+    / /.fluid-container
