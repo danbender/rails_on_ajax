@@ -8,7 +8,12 @@ class MenusController < ApplicationController
 
   def create
     @menu = Menu.new params[:menu]
-    @menu.save
+    if @menu.save
+      redirect_to root_path
+    else
+      @menus = Menu.all
+      render :index
+    end
   end
 
   def show

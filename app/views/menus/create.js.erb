@@ -1,6 +1,0 @@
-<% if @menu.errors.present? %>
-  $('ul.menus').before("<%= @menu.errors.full_messages.join(', ')%>");
-<% else %>
-  $('ul.menus').append("<%= j render 'menu', :menu => @menu %>");
-<% end %>
-
